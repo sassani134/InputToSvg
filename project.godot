@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="InputToSvg"
+run/main_scene="uid://bs0sk76tv1oyx"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://c00fah1tir474"
+
+[autoload]
+
+FindSvgInput="*uid://bobui1mdql86b"
 
 [display]
 
