@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bs0sk76tv1oyx"]
+
+[ext_resource type="Script" uid="uid://ngwwilsvj2bh" path="res://addons/inputtosvg/Scripts/MainScene.gd" id="1_yo7vq"]
+[ext_resource type="Texture2D" uid="uid://c00fah1tir474" path="res://addons/inputtosvg/Assets/KenneyInput/Keyboard & Mouse/keyboard.svg" id="2_lxtqa"]
+
+[node name="Main" type="Control" unique_id=1255727561]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yo7vq")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=415450247]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=1856540831]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_lxtqa")
+
+[node name="Label" type="Label" parent="CenterContainer" unique_id=817236151]
+visible = false
+layout_mode = 2
