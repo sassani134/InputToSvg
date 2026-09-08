@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="InputToSvg"
+config/description="InputToSvg
+a pluggin use to recieve Input from Controller (PS4, GameCube, Xbox, etc.) TouchScreen Mouse and keyboard and transform it into SVG."
+config/version="0.0.6"
 run/main_scene="uid://bs0sk76tv1oyx"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="uid://c00fah1tir474"
+config/icon="uid://b5t4artd874et"
 
 [autoload]
 
@@ -23,6 +26,13 @@ FindSvgInput="*uid://bobui1mdql86b"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[input]
+
+aze={
+"deadzone": 0.2,
+"events": []
+}
 
 [physics]
 
