@@ -1,6 +1,6 @@
 extends Node
 
-# ─── Chemins des SVG ───
+# ─── SVG Path ───
 const SVG_PATH: String = "res://addons/inputtosvg/Assets/KenneyInput/"
 const FLAIRS_RES: String = "Flairs/"
 const GENERIC_RES : String = "Generic/"
@@ -20,7 +20,7 @@ const TOUCH_RES : String = "Touch/"
 const VALVE_INDEX_RES : String = "Valve Index/"
 const XBOX_RES : String = "Xbox Series/"
 
-# Mapping des touches
+# Key Mapping
 const KEY_SVG_MAP: Dictionary[Key,String] = {
 	# Alphabétique
 	KEY_A: "keyboard_a.svg",
@@ -50,7 +50,7 @@ const KEY_SVG_MAP: Dictionary[Key,String] = {
 	KEY_Y: "keyboard_y.svg",
 	KEY_Z: "keyboard_z.svg",
 	
-	# Chiffres
+	# Numbers
 	KEY_0: "keyboard_0.svg",
 	KEY_1: "keyboard_1.svg",
 	KEY_2: "keyboard_2.svg",
@@ -62,7 +62,7 @@ const KEY_SVG_MAP: Dictionary[Key,String] = {
 	KEY_8: "keyboard_8.svg",
 	KEY_9: "keyboard_9.svg",
 	
-	# Fonctions
+	# Function fkeys
 	KEY_F1: "keyboard_f1.svg",
 	KEY_F2: "keyboard_f2.svg",
 	KEY_F3: "keyboard_f3.svg",
@@ -76,7 +76,7 @@ const KEY_SVG_MAP: Dictionary[Key,String] = {
 	KEY_F11: "keyboard_f11.svg",
 	KEY_F12: "keyboard_f12.svg",
 	
-	# Modificateurs
+	# Modifiers keys
 	KEY_SHIFT: "keyboard_shift.svg",
 	KEY_CTRL: "keyboard_ctrl.svg",
 	KEY_ALT: "keyboard_alt.svg",
@@ -85,91 +85,106 @@ const KEY_SVG_MAP: Dictionary[Key,String] = {
 	KEY_NUMLOCK: "keyboard_numlock.svg",
 	KEY_SCROLLLOCK: "keyboard_scrolllock.svg",
 	
-	# Navigation
-	KEY_UP: "keyboard_up.svg",
-	KEY_DOWN: "keyboard_down.svg",
-	KEY_LEFT: "keyboard_left.svg",
-	KEY_RIGHT: "keyboard_right.svg",
-	KEY_PAGEUP: "oard_pageup.svg",
-	KEY_PAGEDOWN: "oard_pagedown.svg",
-	KEY_HOME: "oard_home.svg",
-	KEY_END: "oard_end.svg",
-	KEY_INSERT: "oard_insert.svg",
-	KEY_DELETE: "oard_delete.svg",
-	KEY_BACKSPACE: "oard_backspace.svg",
-	KEY_TAB: "oard_tab.svg",
-	KEY_ENTER: "oard_enter.svg",
-	KEY_ESCAPE: "oard_escape.svg",
-	KEY_SPACE: "oard_space.svg",
+	# Navigation keys
+	KEY_UP: "keyboard_arrow_up.svg",
+	KEY_DOWN: "keyboard_arrow_down.svg",
+	KEY_LEFT: "keyboard_arrow_left.svg",
+	KEY_RIGHT: "keyboard_arrow_right.svg",
+	KEY_PAGEUP: "keyboard_pageup.svg",
+	KEY_PAGEDOWN: "keyboard_pagedown.svg",
+	KEY_HOME: "keyboard_home.svg",
+	KEY_END: "keyboard_end.svg",
+	KEY_INSERT: "keyboard_insert.svg",
+	KEY_DELETE: "keyboard_delete.svg",
+	KEY_BACKSPACE: "keyboard_backspace.svg",
+	KEY_TAB: "keyboard_tab.svg",
+	KEY_ENTER: "keyboard_enter.svg",
+	KEY_ESCAPE: "keyboard_escape.svg",
+	KEY_SPACE: "keyboard_space.svg",
 	
-	# Symboles
-	KEY_EXCLAM: "oard_exclam.svg",
-	KEY_QUOTEDBL: "oard_quotedbl.svg",
-	KEY_NUMBERSIGN: "oard_numbersign.svg",
-	KEY_DOLLAR: "oard_dollar.svg",
-	KEY_PERCENT: "oard_percent.svg",
-	KEY_AMPERSAND: "oard_ampersand.svg",
-	KEY_APOSTROPHE: "oard_apostrophe.svg",
-	KEY_PARENLEFT: "oard_parenleft.svg",
-	KEY_PARENRIGHT: "oard_parenright.svg",
-	KEY_ASTERISK: "oard_asterisk.svg",
-	KEY_PLUS: "oard_plus.svg",
-	KEY_COMMA: "oard_comma.svg",
-	KEY_MINUS: "oard_minus.svg",
-	KEY_PERIOD: "oard_period.svg",
-	KEY_SLASH: "oard_slash.svg",
-	KEY_COLON: "oard_colon.svg",
-	KEY_SEMICOLON: "oard_semicolon.svg",
-	KEY_LESS: "oard_less.svg",
-	KEY_EQUAL: "oard_equal.svg",
-	KEY_GREATER: "oard_greater.svg",
-	KEY_QUESTION: "oard_question.svg",
-	KEY_AT: "oard_at.svg",
-	KEY_BRACKETLEFT: "oard_bracketleft.svg",
-	KEY_BACKSLASH: "oard_backslash.svg",
-	KEY_BRACKETRIGHT: "oard_bracketright.svg",
-	KEY_ASCIICIRCUM: "oard_asciicircum.svg",
-	KEY_UNDERSCORE: "oard_underscore.svg",
-	KEY_QUOTELEFT: "oard_quoteleft.svg",
-	KEY_BRACELEFT: "oard_braceleft.svg",
+	# Symbol keys
+	KEY_EXCLAM: "keyboard_exclamation.svg",
+	KEY_QUOTEDBL: "keyboard_quotedbl.svg",
+	KEY_NUMBERSIGN: "keyboard_numbersign.svg",
+	KEY_DOLLAR: "keyboard_dollar.svg",
+	KEY_PERCENT: "keyboard_percent.svg",
+	KEY_AMPERSAND: "keyboard_ampersand.svg",
+	KEY_APOSTROPHE: "keyboard_apostrophe.svg",
+	KEY_PARENLEFT: "keyboard_parenleft.svg",
+	KEY_PARENRIGHT: "keyboard_parenright.svg",
+	KEY_ASTERISK: "keyboard_asterisk.svg",
+	KEY_PLUS: "keyboard_plus.svg",
+	KEY_COMMA: "keyboard_comma.svg",
+	KEY_MINUS: "keyboard_minus.svg",
+	KEY_PERIOD: "keyboard_period.svg",
+	KEY_SLASH: "keyboard_slash.svg",
+	KEY_COLON: "keyboard_colon.svg",
+	KEY_SEMICOLON: "keyboard_semicolon.svg",
+	KEY_LESS: "keyboard_less.svg",
+	KEY_EQUAL: "keyboard_equal.svg",
+	KEY_GREATER: "keyboard_greater.svg",
+	KEY_QUESTION: "keyboard_question.svg",
+	KEY_AT: "keyboard_at.svg",
+	KEY_BRACKETLEFT: "keyboard_bracketleft.svg",
+	KEY_BACKSLASH: "keyboard_backslash.svg",
+	KEY_BRACKETRIGHT: "keyboard_bracketright.svg",
+	KEY_ASCIICIRCUM: "keyboard_asciicircum.svg",
+	KEY_UNDERSCORE: "keyboard_underscore.svg",
+	KEY_QUOTELEFT: "keyboard_quoteleft.svg",
+	KEY_BRACELEFT: "keyboard_braceleft.svg",
 	KEY_BAR: "keyboard_bar.svg",
 	KEY_BRACERIGHT: "keyboard_braceright.svg",
 	KEY_ASCIITILDE: "keyboard_asciitilde.svg",
 }
 
 # Mapping des boutons de manette
-const JOY_BUTTON_SVG_MAP: Dictionary[JoyButton,String] = {
-	JOY_BUTTON_A: "xbox_button_color_a.svg",
-	JOY_BUTTON_B: "xbox_button_color_b.svg",
-	JOY_BUTTON_X: "xbox_button_color_x.svg",
-	JOY_BUTTON_Y: "xbox_button_color_y.svg",
-	JOY_BUTTON_BACK: "xbox_back.svg",
-	JOY_BUTTON_GUIDE: "xbox_guide.svg",
-	JOY_BUTTON_START: "xbox_start.svg",
-	JOY_BUTTON_LEFT_STICK: "xbox_left_stick.svg",
-	JOY_BUTTON_RIGHT_STICK: "xbox_right_stick.svg",
-	JOY_BUTTON_LEFT_SHOULDER: "xbox_lb.svg",
-	JOY_BUTTON_RIGHT_SHOULDER: "xbox_rb.svg",
-	JOY_BUTTON_DPAD_UP: "xbox_dpad_up.svg",
-	JOY_BUTTON_DPAD_DOWN: "xbox_dpad_down.svg",
-	JOY_BUTTON_DPAD_LEFT: "xbox_dpad_left.svg",
-	JOY_BUTTON_DPAD_RIGHT: "xbox_dpad_right.svg",
-	JOY_BUTTON_MISC1: "xbox_menu.svg",
-	JOY_BUTTON_PADDLE1: "xbox_paddle1.svg",
-	JOY_BUTTON_PADDLE2: "xbox_paddle2.svg",
-	JOY_BUTTON_PADDLE3: "xbox_paddle3.svg",
-	JOY_BUTTON_PADDLE4: "xbox_paddle4.svg",
-	JOY_BUTTON_TOUCHPAD: "xbox_touchpad.svg",
+# create a standard for buttons
+
+const JOY_BUTTON_SVG_MAP_STANDARD: Dictionary[JoyButton,String] = {
+	JOY_BUTTON_A: "joy_button_a.svg", # Sony Cross, Xbox A, Nintendo B.
+	JOY_BUTTON_B: "joy_button_b.svg",# Sony Circle, Xbox B, Nintendo A.
+	JOY_BUTTON_X: "joy_button_x.svg", # Sony Square, Xbox X, Nintendo Y.
+	JOY_BUTTON_Y: "joy_button_y.svg", # Sony Triangle, Xbox Y, Nintendo X.
+	JOY_BUTTON_BACK: "joy_button_back.svg", # Sony Select, Xbox Back, Nintendo - button.
+	JOY_BUTTON_GUIDE: "joy_button_guide.svg", # Sony PS, Xbox Home button.
+	JOY_BUTTON_START: "joy_button_start.svg", # Sony Options, Xbox Menu, Nintendo + button.
+	JOY_BUTTON_LEFT_STICK: "joy_button_left_stick.svg",
+	JOY_BUTTON_RIGHT_STICK: "joy_button_right_stick.svg",
+	JOY_BUTTON_LEFT_SHOULDER: "joy_button_lb.svg",
+	JOY_BUTTON_RIGHT_SHOULDER: "joy_button_rb.svg",
+	JOY_BUTTON_DPAD_UP: "joy_button_dpad_up.svg",
+	JOY_BUTTON_DPAD_DOWN: "joy_button_dpad_down.svg",
+	JOY_BUTTON_DPAD_LEFT: "joy_button_dpad_left.svg",
+	JOY_BUTTON_DPAD_RIGHT: "joy_button_dpad_right.svg",
+	JOY_BUTTON_MISC1: "joy_button_misc1.svg", # Xbox share button, PS5 microphone button, Nintendo Switch capture button.
+	JOY_BUTTON_PADDLE1: "joy_button_paddle1.svg", # xbox_elite_paddle_bottom_left
+	JOY_BUTTON_PADDLE2: "joy_button_paddle2.svg", # xbox_elite_paddle_bottom_right
+	JOY_BUTTON_PADDLE3: "joy_button_paddle3.svg", # xbox_elite_paddle_top_left
+	JOY_BUTTON_PADDLE4: "joy_button_paddle4.svg", # xbox_elite_paddle_top_right
+	JOY_BUTTON_TOUCHPAD: "joy_button_touchpad.svg",
+	JOY_BUTTON_MISC2: "joy_button_misc2.svg", #Nintendo Switch 2 Pro Controller and Horipad Steam controllers
+	JOY_BUTTON_MISC3: "joy_button_misc3.svg",
+	JOY_BUTTON_MISC4: "joy_button_misc4.svg",
+	JOY_BUTTON_MISC5: "joy_button_misc5.svg",
+	JOY_BUTTON_MISC6: "joy_button_misc6.svg"
 }
 
-# Mapping des axes de manette (pour les triggers/gâchettes)
-const JOY_AXIS_SVG_MAP: Dictionary[JoyAxis,String] = {
-	JOY_AXIS_LEFT_X: "xbox_left_stick.svg",
-	JOY_AXIS_LEFT_Y: "xbox_left_stick.svg",
-	JOY_AXIS_RIGHT_X: "xbox_right_stick.svg",
-	JOY_AXIS_RIGHT_Y: "xbox_right_stick.svg",
-	JOY_AXIS_TRIGGER_LEFT: "xbox_lt.svg",
-	JOY_AXIS_TRIGGER_RIGHT: "xbox_rt.svg",
+
+# float axis_value = 0.0
+# InputEventJoypadMotion JoyAxis float
+const JOY_AXIS_SVG_MAP_STANDARD: Dictionary[JoyAxis,String] = {
+	#1: stick size, 2: direction input
+	JOY_AXIS_LEFT_X: "joy_axis_left_x",
+	JOY_AXIS_LEFT_Y: "joy_axis_left_y",
+	JOY_AXIS_RIGHT_X: "joy_axis_right_x",
+	JOY_AXIS_RIGHT_Y: "joy_axis_right_y",
+	JOY_AXIS_TRIGGER_LEFT: "joy_axis_trigger_l.svg",
+	JOY_AXIS_TRIGGER_RIGHT: "joy_axis_trigger_r.svg",
+}
+
+const JOY_AXIS_VALUE_SVG_MAP_STANDARD : Dictionary[String,String] = {
+	"positive": "_pos.svg",
+	"negative": "_neg.svg"
 }
 
 # Mapping des boutons souris
@@ -189,9 +204,6 @@ const MOUSE_BUTTON_SVG_MAP: Dictionary[MouseButton,String] = {
 # Par défaut, on essaie de mapper automatiquement
 var _action_svg_cache: Dictionary = {}
 
-# ─── Méthodes principales ───
-
-	
 
 func get_svg_for_key(key: Key) -> String:
 	"""
@@ -199,33 +211,69 @@ func get_svg_for_key(key: Key) -> String:
 	Exemple: get_svg_for_key(KEY_A) -> "res://assets/icons/inputs/key_a.svg"
 	"""
 	if KEY_SVG_MAP.has(key):
-		return SVG_PATH + KEY_SVG_MAP[key]
-	return SVG_PATH + "key_unknown.svg"
+		return SVG_PATH + KM_RES + KEY_SVG_MAP[key]
+	return "res://addons/inputtosvg/Assets/KenneyInput/Flairs/flair_disabled_cross.svg"
 
-func get_svg_for_joy_button(button: JoyButton) -> String:
+func get_svg_for_joy_button(manette : String, button: JoyButton) -> String:
 	"""
 	Retourne le chemin du SVG correspondant à un bouton de manette.
 	Exemple: get_svg_for_joy_button(JoyButton.A) -> "res://assets/icons/inputs/xbox_a.svg"
 	"""
-	if JOY_BUTTON_SVG_MAP.has(button):
-		return SVG_PATH + JOY_BUTTON_SVG_MAP[button]
-	return SVG_PATH + "gamepad_unknown.svg"
+# https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt
+	var path_controller : String = SVG_PATH
+	match manette:
+		"playstation", "PS5 Controller", "PS4 Controller", "PS3 Controller", "PS2 Controller", "Sony DualShock 4 Adapter":
+			path_controller =path_controller + PS_RES
+		"xbox", "Xbox 360 Controller",  "Xbox Adaptive Controller", "Xbox Elite Controller", "Xbox One Controller", "Xbox Series Controller" :
+			path_controller = path_controller + XBOX_RES
+		"switch", "Nintendo Switch Controller", "Nintendo Switch Pro Controller", "Nintendo Switch Joy-Con (L)", "Nintendo Switch Joy-Con (R)" :
+			path_controller = path_controller + SWITCH_RES
+		"gamecube", "GameCube" ,"GC and N64", "NSO GameCube Controller":
+			path_controller = path_controller + GC_RES 
+		"steam", "Steam", "Steam Virtual Gamepad", "Valve Steam Controller", "Valve Steam Deck":
+			path_controller = path_controller + STEAM_CONTROLLER_RES
+		"switch2", "switch 2", "Nintendo Switch 2 Controller":
+			path_controller = path_controller + SWITCH2_RES
+		_:
+			path_controller = path_controller + GENERIC_RES
+	if JOY_BUTTON_SVG_MAP_STANDARD.has(button):
+		return path_controller + "standard/"+ JOY_BUTTON_SVG_MAP_STANDARD[button] # standarisé les noms des buttons
+	return "res://addons/inputtosvg/Assets/KenneyInput/Flairs/flair_disabled_cross.svg"
 
-func get_svg_for_joy_axis(axis: JoyAxis, direction: String = "") -> String:
+func get_svg_for_joy_axis(manette : String, axis: JoyAxis, value: float) -> String:
 	"""
 	Retourne le chemin du SVG correspondant à un axe de manette.
 	direction: "up", "down", "left", "right" pour les sticks
 	"""
-	if JOY_AXIS_SVG_MAP.has(axis):
-		var base_path = SVG_PATH + JOY_AXIS_SVG_MAP[axis]
-		# Pour les sticks directionnels, on peut avoir des variantes
-		if direction != "" and (axis == JoyAxis.JOY_AXIS_LEFT_X or axis == JoyAxis.JOY_AXIS_LEFT_Y or 
-								 axis == JoyAxis.JOY_AXIS_RIGHT_X or axis == JoyAxis.JOY_AXIS_RIGHT_Y):
-			var variant = base_path.replace(".svg", "_" + direction + ".svg")
-			if ResourceLoader.exists(variant):
-				return variant
-		return base_path
-	return SVG_PATH + "gamepad_unknown.svg"
+	var path_controller : String = SVG_PATH
+	match manette:
+		"playstation", "PS5 Controller", "PS4 Controller", "PS3 Controller", "PS2 Controller", "Sony DualShock 4 Adapter":
+			path_controller =path_controller + PS_RES
+		"xbox", "Xbox 360 Controller",  "Xbox Adaptive Controller", "Xbox Elite Controller", "Xbox One Controller", "Xbox Series Controller" :
+			path_controller = path_controller + XBOX_RES
+		"switch", "Nintendo Switch Controller", "Nintendo Switch Pro Controller", "Nintendo Switch Joy-Con (L)", "Nintendo Switch Joy-Con (R)" :
+			path_controller = path_controller + SWITCH_RES
+		"gamecube", "GameCube" ,"GC and N64", "NSO GameCube Controller":
+			path_controller = path_controller + GC_RES 
+		"steam", "Steam", "Steam Virtual Gamepad", "Valve Steam Controller", "Valve Steam Deck":
+			path_controller = path_controller + STEAM_CONTROLLER_RES
+		"switch2", "switch 2", "Nintendo Switch 2 Controller":
+			path_controller = path_controller + SWITCH2_RES
+		_:
+			path_controller = path_controller + GENERIC_RES
+	path_controller = path_controller + "standard/"
+	if JOY_AXIS_SVG_MAP_STANDARD.has(axis):
+		path_controller = path_controller + JOY_AXIS_SVG_MAP_STANDARD[axis]
+		if axis == JOY_AXIS_TRIGGER_LEFT or axis == JOY_AXIS_TRIGGER_RIGHT:
+			return path_controller
+		if value > 0:
+			path_controller = path_controller + "_pos.svg"
+		elif value <0:
+			path_controller = path_controller + "_neg.svg"
+		return path_controller
+	return "res://addons/inputtosvg/Assets/KenneyInput/Flairs/flair_disabled_cross.svg"
+
+
 
 func get_svg_for_mouse_button(button: MouseButton) -> String:
 	"""
@@ -233,116 +281,4 @@ func get_svg_for_mouse_button(button: MouseButton) -> String:
 	"""
 	if MOUSE_BUTTON_SVG_MAP.has(button):
 		return SVG_PATH + MOUSE_BUTTON_SVG_MAP[button]
-	return SVG_PATH + "mouse_unknown.svg"
-
-func get_svg_for_input_event(event: InputEvent) -> String:
-	"""
-	Retourne le chemin du SVG correspondant à un événement input.
-	Fonction principale à utiliser dans la plupart des cas.
-	"""
-	if event is InputEventKey:
-		var key_event = event as InputEventKey
-		return get_svg_for_key(key_event.keycode)
-	
-	elif event is InputEventJoypadButton:
-		var joy_event = event as InputEventJoypadButton
-		return get_svg_for_joy_button(joy_event.button_index)
-	
-	elif event is InputEventJoypadMotion:
-		var joy_event = event as InputEventJoypadMotion
-		# Pour les axes, on détecte la direction JOY_AXIS_TRIGGER_LEFT
-		if joy_event.axis == JoyAxis.JOY_AXIS_TRIGGER_LEFT or joy_event.axis == JoyAxis.JOY_AXIS_TRIGGER_RIGHT:
-			return get_svg_for_joy_axis(joy_event.axis)
-		elif joy_event.axis_value > 0.5:
-			return get_svg_for_joy_axis(joy_event.axis, "right")
-		elif joy_event.axis_value < -0.5:
-			return get_svg_for_joy_axis(joy_event.axis, "left")
-		else:
-			return get_svg_for_joy_axis(joy_event.axis)
-	
-	elif event is InputEventMouseButton:
-		var mouse_event = event as InputEventMouseButton
-		return get_svg_for_mouse_button(mouse_event.button_index)
-	
-	return SVG_PATH + "unknown.svg"
-
-func get_svg_for_action(action_name: String) -> String:
-	"""
-	Retourne le SVG correspondant à une action InputMap.
-	Utilise le cache pour les performances.
-	"""
-	# Vérifier le cache
-	if _action_svg_cache.has(action_name):
-		return _action_svg_cache[action_name]
-	
-	# Chercher dans les actions définies dans InputMap
-	if InputMap.has_action(action_name):
-		var events = InputMap.action_get_events(action_name)
-		if events.size() > 0:
-			# Prendre le premier événement
-			var svg_path = get_svg_for_input_event(events[0])
-			_action_svg_cache[action_name] = svg_path
-			return svg_path
-	
-	# Fallback
-	_action_svg_cache[action_name] = SVG_PATH + "unknown.svg"
-	return _action_svg_cache[action_name]
-
-func get_svg_for_action_with_fallback(action_name: String, fallback_svg: String = "") -> String:
-	"""
-	Retourne le SVG correspondant à une action, avec fallback personnalisé.
-	"""
-	var result = get_svg_for_action(action_name)
-	if result == SVG_PATH + "unknown.svg" and fallback_svg != "":
-		return fallback_svg
-	return result
-
-# ─── Méthodes utilitaires ───
-
-func get_all_action_svgs() -> Dictionary:
-	"""
-	Retourne un dictionnaire de toutes les actions InputMap avec leurs SVG.
-	Utile pour les paramètres/options.
-	"""
-	var result = {}
-	for action in InputMap.get_actions():
-		result[action] = get_svg_for_action(action)
-	return result
-
-func get_svg_path_for_key_name(key_name: String) -> String:
-	"""
-	Version alternative : utiliser le nom de la touche en string.
-	Exemple: get_svg_path_for_key_name("A") -> "res://.../key_a.svg"
-	"""
-	var key = OS.find_keycode_from_string(key_name)
-	if key != KEY_NONE:
-		return get_svg_for_key(key)
-	return SVG_PATH + "key_unknown.svg"
-
-func get_icon_texture(svg_path: String) -> Texture2D:
-	"""
-	Charge et retourne une texture depuis un SVG.
-	Utile pour afficher directement l'icône.
-	"""
-	if ResourceLoader.exists(svg_path):
-		return load(svg_path) as Texture2D
-	return null
-
-func get_icon_for_action(action_name: String) -> Texture2D:
-	"""
-	Retourne directement la texture pour une action.
-	"""
-	var svg_path = get_svg_for_action(action_name)
-	return get_icon_texture(svg_path)
-
-# ─── Debug ───
-
-func debug_print_action_mappings() -> void:
-	"""
-	Affiche toutes les actions avec leurs SVG correspondants.
-	Utile pour le debug.
-	"""
-	print("=== Action SVG Mappings ===")
-	for action in InputMap.get_actions():
-		var svg = get_svg_for_action(action)
-		print("%s -> %s" % [action, svg])
+	return "res://addons/inputtosvg/Assets/KenneyInput/Flairs/flair_disabled_cross.svg"
