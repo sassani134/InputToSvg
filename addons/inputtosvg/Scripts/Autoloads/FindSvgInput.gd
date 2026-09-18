@@ -1,6 +1,6 @@
 extends Node
 
-# ─── SVG Path ───
+# SVG Path
 const SVG_PATH: String = "res://addons/inputtosvg/Assets/KenneyInput/"
 const FLAIRS_RES: String = "Flairs/"
 const GENERIC_RES : String = "Generic/"
@@ -207,7 +207,7 @@ var _action_svg_cache: Dictionary = {}
 
 func get_svg_for_key(key: Key) -> String:
 	"""
-	Retourne le chemin du SVG correspondant à une touche clavier.
+	Return SVG path from a keyboard touch
 	Exemple: get_svg_for_key(KEY_A) -> "res://assets/icons/inputs/key_a.svg"
 	"""
 	if KEY_SVG_MAP.has(key):
@@ -216,7 +216,7 @@ func get_svg_for_key(key: Key) -> String:
 
 func get_svg_for_joy_button(manette : String, button: JoyButton) -> String:
 	"""
-	Retourne le chemin du SVG correspondant à un bouton de manette.
+	Return SVG path for joypadButton
 	Exemple: get_svg_for_joy_button(JoyButton.A) -> "res://assets/icons/inputs/xbox_a.svg"
 	"""
 # https://github.com/mdqinc/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt
@@ -242,7 +242,7 @@ func get_svg_for_joy_button(manette : String, button: JoyButton) -> String:
 
 func get_svg_for_joy_axis(manette : String, axis: JoyAxis, value: float) -> String:
 	"""
-	Retourne le chemin du SVG correspondant à un axe de manette.
+	Return SVG path of Controller Axis
 	direction: "up", "down", "left", "right" pour les sticks
 	"""
 	var path_controller : String = SVG_PATH
@@ -277,8 +277,8 @@ func get_svg_for_joy_axis(manette : String, axis: JoyAxis, value: float) -> Stri
 
 func get_svg_for_mouse_button(button: MouseButton) -> String:
 	"""
-	Retourne le chemin du SVG correspondant à un bouton souris.
+	Return SVG path of mouse button
 	"""
 	if MOUSE_BUTTON_SVG_MAP.has(button):
-		return SVG_PATH + MOUSE_BUTTON_SVG_MAP[button]
+		return SVG_PATH +KM_RES+ MOUSE_BUTTON_SVG_MAP[button]
 	return "res://addons/inputtosvg/Assets/KenneyInput/Flairs/flair_disabled_cross.svg"
