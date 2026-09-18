@@ -13,7 +13,7 @@ config_version=5
 config/name="InputToSvg"
 config/description="InputToSvg
 a pluggin use to recieve Input from Controller (PS4, GameCube, Xbox, etc.) TouchScreen Mouse and keyboard and transform it into SVG."
-config/version="0.0.6"
+config/version="0.3"
 run/main_scene="uid://bs0sk76tv1oyx"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://b5t4artd874et"
