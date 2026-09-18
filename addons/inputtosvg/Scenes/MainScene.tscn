@@ -10,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_yo7vq")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=415450247]
@@ -27,3 +28,18 @@ texture = ExtResource("2_lxtqa")
 [node name="Label" type="Label" parent="CenterContainer" unique_id=817236151]
 visible = false
 layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1628242112]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=319399285]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="joypad_name" type="RichTextLabel" parent="CanvasLayer/HBoxContainer" unique_id=1774532972]
+layout_mode = 2
+bbcode_enabled = true
+
+[node name="joypad_number" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=707225171]
+layout_mode = 2
+text = "2"
