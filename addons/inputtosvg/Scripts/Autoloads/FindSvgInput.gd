@@ -191,13 +191,13 @@ const JOY_AXIS_VALUE_SVG_MAP_STANDARD : Dictionary[String,String] = {
 const MOUSE_BUTTON_SVG_MAP: Dictionary[MouseButton,String] = {
 	MOUSE_BUTTON_LEFT: "mouse_left.svg",
 	MOUSE_BUTTON_RIGHT: "mouse_right.svg",
-	MOUSE_BUTTON_MIDDLE: "mouse_middle.svg",
+	MOUSE_BUTTON_MIDDLE: "mouse_scroll.svg",
 	MOUSE_BUTTON_WHEEL_UP: "mouse_scroll_up.svg",
 	MOUSE_BUTTON_WHEEL_DOWN: "mouse_scroll_down.svg",
 	MOUSE_BUTTON_WHEEL_LEFT: "mouse_scroll_left.svg",
 	MOUSE_BUTTON_WHEEL_RIGHT: "mouse_scroll_right.svg",
-	MOUSE_BUTTON_XBUTTON1: "mouse_x1.svg",
-	MOUSE_BUTTON_XBUTTON2: "mouse_x2.svg",
+	MOUSE_BUTTON_XBUTTON1: "mouse_side_forward.svg",
+	MOUSE_BUTTON_XBUTTON2: "mouse_side_back.svg",
 }
 
 # Mapping des actions InputMap vers les SVG
